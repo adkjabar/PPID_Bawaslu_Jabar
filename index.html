@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>PPID | Bawaslu Jawa Barat</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #FF9C00;
+    color: #fff;
+    padding: 150px 25px;
+    background-image: url(tron1.jpg);
+    background-size: cover;
+    position: relative;
+    font-family: helvetica;
+    text-shadow: 3px 2px black;
+  }
+  .jumbotron h1 {
+    font-family: Freehand521 BT;
+    text-shadow: 3px 2px black;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #FF9C00;
+    font-size: 50px;
+  }
+  .logo {
+    color: #FF9C00;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #FF9C00;
+  }
+  .carousel-indicators li {
+    border-color: #FF9C00;
+  }
+  .carousel-indicators li.active {
+    background-color: #FF9C00;
+  }
+  .item h4 {
+    font-size: 24px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: bold;
+    margin: 70px 0;
+    color: #FF9C00; 
+  }
+  .item span {
+    font-style: normal;
+    color: black;
+    font-size: 18px;
+  }
+  .panel {
+    border: 0px solid #FF9C00; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #FF9C00;
+    background-color: #fff !important;
+    color: #FF9C00;
+  }
+  .panel-heading {
+    color: #fff !important;
+    padding: 30px;
+    border-bottom: 0px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-heading h1 {
+    font-size: 16px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #white;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #FF9C00;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 1px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #FF9C00 !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #FF9C00;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+tr:nth-child(even){background-color: #F8D4A0}
+}
+.modal-body {
+width: 567px;
+}
+.modal-body img {
+width : 567px;
+}
+@media (max-width: 1024px) {
+.modal-body img {
+width:550px; }
+}
+@media (max-width: 800px) {
+.modal-body img {
+width: 500px;
+}
+}
+@media (max-width: 768px) {
+.modal-body img {
+width: 345px;
+text-align: center;
+}
+}
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">PPID Bawaslu Jawa Barat</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">PROFIL</a></li>
+        <li><a href="#services">REGULASI</a></li>
+        <li><a href="#pricing">INFORMASI PUBLIK</a></li>
+        <li><a href="#">STANDARD LAYANAN</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Wilujeng Sumping</h1> 
+  <p>Terima kasih telah mengunjungi layanan e-PPID Badan Pengawas Pemilihan Umum Provinsi Jawa Barat. <br>
+    Layanan ini merupakan sarana informasi publik sebagai salah satu wujud pelaksanaan keterbukaan informasi pada 
+    <br> Badan Pengawas Pemilihan Umum.</p> 
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="25" placeholder="Masukkan Kata Kunci" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Cari Disini</button>
+      </form></div>
+    </div>
+  </div>
+
+  <!-- Membuat Modal Pop UP -->
+<div id="myModal" class="modal fade" role="dialog">
+     <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <!-- <h4 class="modal-title">Welcome</h4> -->
+        </div>
+        <div class="modal-body">
+           <p><img src="img/modal_prosedur.jpg"></p>
+        </div></div>
+       <!--  <div class="modal-footer">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        </div> -->
+    </div>
+    </div>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Bawaslu Terbuka & Melayani</h2>
+      <h4 style="text-align: justify;">Selaras dengan amanat UU No. 14 Tahun 2008 tentang keterbukaan Informasi yang optimal kepada masyarakat, Bawaslu Provinsi Jawa Barat sebagai badan publik berusaha memenuhi kebutuhan masyarakat akan akses informasi Pengawasan Pemilu di Indonesia. <br>Bersama layanan Publik Online ini, kami berusaha dapat memenuhi hak masyarakat atas informasi publik yang cepat, akurat dan efektif. <br>
+      Layanan ini merupakan sarana layanan online bagi pemohon informasi publik sebagai salah satu wujud pelaksanaan keterbukaan informasi publik di Bawaslu.</h4>
+      <button class="btn btn-default btn-lg"><a style="text-decoration: none;" href="https://drive.google.com/file/d/1fdcj3eoz7qeE0P9Ff4a1asWT5mR-SESq/view" target="blank">Download Buku Panduan PPID</button>
+    </div></a>
+    <div class="col-sm-4">
+      <img src="img/logo.jpg">
+    </div>
+  </div>
+</div>
+
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <div class="col-sm-8">
+  <h2 style="text-align: left; padding-left: 50px;" >Langkah Mudah Mendapatkan Informasi</h2>
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+                <h4>CARA PERTAMA<br><span>Cek Menu Informasi Publik di Website PPID Bawaslu Provinsi Jawa Barat</span></h4>
+      </div>
+      <div class="item">
+        <h4>CARA KEDUA<br><span>Gunakanlah Fasilitas Pencarian Untuk Mempermudah Menemukan Informasi </span></h4>
+      </div>
+      <div class="item">
+        <h4>CARA KETIGA<br><span>Jika Informasi Yang Ingin Dicari Belum Tersedia, Ajukan Permohonan Informasi</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    </div>
+</div></button></div>
+<div class="col-sm-4">
+  <iframe width="400" height="210" src="https://www.youtube.com/embed/t6Xl7V-IqkQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+</div>
+</div>
+<!-- Container (Services Section) -->
+<div class="col-sm-12">
+<div id="services" class="container-fluid bg-grey text-center">
+   <h2>REGULASI</h2>
+  <h4>KETERBUKAAN INFORMASI PUBLIK</h4>
+  
+<div style="overflow-x:auto;">
+  <table>
+    <tr style="background-color: orange; color: white">
+      <th>Undang-Undang</th>
+      <th>Peraturan Pemerintah</th>
+      <th>Peraturan Menteri</th>
+      <th>Peraturan Mahkamah Agung</th>
+      <th>Peraturan Bawaslu</th>
+      <th>Peraturan Komisi Informasi</th>
+      </tr>
+    <tr>
+      <td><a href="https://ppid.bawaslu.go.id/sites/default/files/regulasi/uu%2014%20tahun%202008.pdf" target="blank">UU No. 14 Tahun 2018</td>
+      <td><a href="#">PP No 61 Tahun 2010</td>
+      <td><a href="#">PM Kominfo No. 20 Tahun 2016</td>
+      <td><a href="#">Perma No. 2 Tahun 2011</td>
+      <td><a href="#">Perbawaslu Nomor 1 Tahun 2017</td>
+      <td><a href="#">Perki No 1 Tahun 2014</td>
+      </tr>
+    <tr>
+      <td><a href="#">UU No. 25 Tahun 2009</td>
+      <td><a href="#">PP No 61 Tahun 2010</td>
+      <td>-</td>
+      <td>-</td>
+      <td><a href="#">Perbawaslu Nomor 1 Tahun 2017</td>
+      <td><a href="#">Perki No 1 Tahun 2010</td>
+      </tr>
+    <tr>
+      <td><a href="#">UU No. 14 Tahun 2008</td>
+      <td><a href="#">PP No 28 Tahun 2012</td>
+      <td>-</td>
+      <td>-</td>
+      <td><a href="#">Perbawaslu Nomor 1 Tahun 2017</td>
+      <td><a href="#">Perki No 1 Tahun 2010</td>
+      </tr>
+  </table>
+</div>
+  </div>
+</div>
+</div>
+<!-- Container (Portfolio Section) -->
+<!-- <div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Portfolio</h2><br>
+  <h4>What we have created</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="paris.jpg" alt="Paris" width="400" height="300">
+        <p><strong>Paris</strong></p>
+        <p>Yes, we built Paris</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="newyork.jpg" alt="New York" width="400" height="300">
+        <p><strong>New York</strong></p>
+        <p>We built New York</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
+        <p><strong>San Francisco</strong></p>
+        <p>Yes, San Fran is ours</p>
+      </div>
+    </div>
+  </div><br>
+ -->    
+<!-- Container (Pricing Section) -->
+<div class="col-sm-12">
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>INFORMASI PUBLIK</h2>
+    <h4>Informasi Publik Merupakan Salah Satu Ciri Penting Negara Demokratis yang Menjunjung Tinggi Kedaulatan Rakyat</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div style="background-color: #FF9C00 !important;" class="panel-heading">
+          <h1>Informasi Yang Wajib Diumumkan Berkala</h1>
+        </div>
+        <div class="panel-body">
+          <p>Alamat Lengkap</p>
+          <p>Visi dan Misi</p>
+          <p>Tugas dan Fungsi</p>
+          <p>Struktur Organisasi</p>
+          <p>Profil Pimpinan</p>
+        </div>
+        </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div style="background-color: #004d00 !important;" class="panel-heading">
+          <h1>Informasi Kegiatan dan Kinerja Bawaslu</h1>
+        </div>
+        <div class="panel-body">
+          <p>Agenda dan Pelaksanaan Tugas</p>
+          <p>LAKIP Bawaslu Jawa Barat Tahun 2017</p>
+          <p>LAKIP Bawaslu Jawa Barat Tahun 2016</p>
+          <p>LAKIP Bawaslu Jawa Barat Tahun 2015</p>
+          <p>LAKIP Bawaslu Jawa Barat Tahun 2014</p>
+     </div></div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div style="background-color: #990000 !important;" class="panel-heading">
+          <h1>Informasi Mengenai Keuangan Bawaslu</h1>
+        </div>
+        <div class="panel-body">
+          <p>DIPA Tahun Anggaran 2019</p>
+          <p>Laporan Keuangan TA 2017</p>
+          <p>Laporan Keuangan TA 2016</p>
+          <p>Laporan Keuangan TA 2015</p>
+          <p>Laporan Keuangan TA 2014</p>
+        </div>
+        </div></div>
+            <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div style="background-color: #2d2d86 !important;" class="panel-heading">
+          <h1>Informasi Hasil Penelitian</h1>
+        </div>
+        <div class="panel-body">
+          <p>DIPA Tahun Anggaran 2019</p>
+          <p>Laporan Keuangan TA 2017</p>
+          <p>Laporan Keuangan TA 2016</p>
+          <p>Laporan Keuangan TA 2015</p>
+          <p>Laporan Keuangan TA 2014</p>
+        </div>
+        </div></div> 
+            <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div style="background-color: #ff9900 !important;" class="panel-heading">
+          <h1>Informasi Mengenai Pengawasan Pemilu</h1>
+        </div>
+        <div class="panel-body">
+          <p>DIPA Tahun Anggaran 2019</p>
+          <p>Laporan Keuangan TA 2017</p>
+          <p>Laporan Keuangan TA 2016</p>
+          <p>Laporan Keuangan TA 2015</p>
+          <p>Laporan Keuangan TA 2014</p>
+        </div>
+        </div></div> 
+            <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div style="background-color: #cc0000 !important;" class="panel-heading">
+          <h1>Informasi Mengenai Organisasi dan SDM</h1>
+        </div>
+        <div class="panel-body">
+          <p>DIPA Tahun Anggaran 2019</p>
+          <p>Laporan Keuangan TA 2017</p>
+          <p>Laporan Keuangan TA 2016</p>
+          <p>Laporan Keuangan TA 2015</p>
+          <p>Laporan Keuangan TA 2014</p>
+        </div>
+        </div></div>       
+   
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Untuk Permohonan Informasi Silahkan Menghubungi Kami:</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Jl. Turangga No. 25 Kota Bandung</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +62 61504245</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> set.jabar@bawaslu.go.id</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="img/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Saeful Bachrie By <a href="https://www.codepolitan.com" title="Visit w3schools">www.codepolitan.com</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+$('#myModal').modal('show');
+</script>
+</body>
+</html>
